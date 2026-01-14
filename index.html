@@ -110,6 +110,11 @@
   margin-bottom: 36px;
 }
 
+.event-row{
+  display: flex;
+  flex-direction: row;
+}
+  
 .event-row.reverse {
   flex-direction: row-reverse;
 }
@@ -228,8 +233,8 @@
     z-index: 0;
   }
 
-  .garland-left{ left: -15px; }
-  .garland-right{ right: -15px; }
+  .garland-left{ left: -5px; }
+  .garland-right{ right: -5px; }
 
   /* Header */
   header.hero{
@@ -242,7 +247,7 @@
 
   /* Schedule layout */
   .event-row{
-    flex-direction: column !important;
+    flex-direction: column;
   }
 
   .event-row .event-image{
