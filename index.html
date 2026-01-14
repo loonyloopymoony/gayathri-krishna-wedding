@@ -139,20 +139,7 @@
   line-height: 1.6;
 }
 
-/* Mobile responsive */
-@media (max-width: 760px) {
-  .event-row {
-    flex-direction: column !important;
-  }
 
-  .event-row .event-image {
-    order: 1;
-  }
-
-  .event-row .event-content {
-    order: 2;
-  }
-}
 
 
 
@@ -228,8 +215,10 @@
   footer{ padding:28px 10px; text-align:center; color:var(--muted); font-size:13px }
 
  /* MOBILE */
+/* MOBILE */
 @media (max-width:760px){
 
+  /* Pillars */
   .garland-left,
   .garland-right{
     display: block;
@@ -239,9 +228,10 @@
     z-index: 0;
   }
 
-  .garland-left{ left: -40px; }
-  .garland-right{ right: -40px; }
+  .garland-left{ left: -15px; }
+  .garland-right{ right: -15px; }
 
+  /* Header */
   header.hero{
     padding-top:120px;
   }
@@ -249,7 +239,21 @@
   header.hero h1{
     font-size:36px;
   }
+
+  /* Schedule layout */
+  .event-row{
+    flex-direction: column !important;
+  }
+
+  .event-row .event-image{
+    order: 1;
+  }
+
+  .event-row .event-content{
+    order: 2;
+  }
 }
+
 
 
   .attend-options {
