@@ -555,36 +555,47 @@
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwTQasyEFHYx1XX_-vMB4pWOyv6B8kiwqr30ohCrow5u4WyDeq6NqECxca1oz7b2SsDMA/exec";  // from Google Apps Script
 
   form.addEventListener("submit", async function(e){
-    e.preventDefault();
+  e.preventDefault();
 
-    const data = {
-      name: form.name.value,
-      phone: form.phone.value,
-      attend: form.attend.value,
-      day_6: form.day_6.checked ? "Yes" : "No",
-      day_7: form.day_7.checked ? "Yes" : "No",
-      arrival_date: form.arrival_date.value,
-      arrival_time: form.arrival_time.value,
-      guests: form.guests.value,
-      note: form.note.value
-    };
+  const data = {
+    name: form.name.value,
+    phone: form.phone.value,
+    attend: form.attend.value,
+    day_6: form.day_6.checked ? "Yes" : "No",
+    day_7: form.day_7.checked ? "Yes" : "No",
+    arrival_date: form.arrival_date.value,
+    arrival_time: form.arrival_time.value,
+    guests: form.guests.value,
+    note: form.note.value
+  };
 
-    try {
-      const res = await fetch(SCRIPT_URL, {
-        method: "POST",
-        body: JSON.stringify(data)
-      });
+  try {
+    const res = await fetch(SCRIPT_URL, {
+      method: "POST",
+      body: JSON.stringify(data)
+    });
 
-      if(res.ok){
-        form.style.display = "none";
-        thanks.style.display = "block";
-      } else {
-        alert("Submission failed. Please try again.");
-      }
-    } catch(err){
-      alert("Network error. Please check your internet.");
+    if(res.ok){
+      // Clear form
+      form.reset();
+
+      // Show success message
+      thanks.innerText = "✅ RSVP sent successfully!";
+      thanks.style.display = "block";
+
+      // Auto hide after 4 seconds (optional)
+      setTimeout(() => {
+        thanks.style.display = "none";
+      }, 4000);
+
+    } else {
+      alert("Submission failed. Please try again.");
     }
-  });
+  } catch(err){
+    alert("Network error. Please check your internet.");
+  }
+});
+
 
   // TAB SWITCHING FUNCTION
   function openTab(e, tabId) {
