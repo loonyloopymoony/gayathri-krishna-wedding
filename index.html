@@ -5,283 +5,285 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Gayathri & Krishna — Wedding, June 6–7, 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --accent:#0f172a;
-    --muted:#6b7280;
-    --bg:#fbfaf8;
-    --card:#fff;
-    --gold:#c59b4b;
+  --accent:#4a3728;
+  --muted:#8b7355;
+  --bg:#fdf6f0;
+  --card:rgba(255,255,255,0.7);
+  --gold:#d4af37;
 
-    --pillar-width: 400px;
-    --pillar-top: 0px;
-  }
-
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
-    color:var(--accent);
-    background:var(--bg);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    overflow-x:hidden;
-  }
-
-  /* SIDE PILLARS */
-  .garland-left, .garland-right{
-    position: fixed;
-    top: var(--pillar-top);
-    width: var(--pillar-width);
-    height: auto;
-    z-index: 0;
-    pointer-events: none;
-    display: block;
-  }
-  .garland-left { left: 0; }
-  .garland-right { right: 0; }
-
-  /* HEADER */
-  header.hero{
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: var(--accent);
-    padding-top: 50px;     /* spacing from top so text sits below pillars’ top border */
-    padding-bottom: 40px;
-    margin-bottom: 24px;
-  }
-
-  header.hero h1{
-    font-family:"Playfair Display",serif;
-    font-size:54px;
-    margin:0;
-    line-height:1.2;
-  }
-
-  header.hero p.lead{
-    color:var(--muted);
-    font-size:18px;
-    margin-top:10px;
-  }
-
-  header.hero h1, header.hero p.lead{
-    text-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-
-.event-block.v1 {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  margin-bottom: 26px;
+  --pillar-width: 400px;
+  --pillar-top: 0px;
 }
 
-.event-text {
-  display: block;
+*{box-sizing:border-box}
+html,body{height:100%}
+
+body{
+  margin:0;
+  font-family:'Cinzel', serif;
+  color:var(--accent);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
 
-.event-text h3 {
-  margin: 0;
-  font-family: "Playfair Display", serif;
+/* INTRO OVERLAY */
+#intro{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#fdf6f0,#fbfaf8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+  text-align:center;
 }
 
-.event-text p {
-  margin-top: 6px;
+.intro-inner{
+  animation:fadeUp 1.5s ease forwards;
 }
 
-.event-block.v2 {
-  display: block;
-  text-align: left;
-  margin-bottom: 32px;
+.intro-sub{
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#a67c52;
+  font-size:12px;
 }
 
-.event-block.v2 img {
-  margin-bottom: 10px;
+.intro-names{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  margin:10px 0;
+  color:#8b5e3c;
 }
 
-.event-row {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-  margin-bottom: 36px;
+.intro-date{
+  color:#6b7280;
+  margin-bottom:20px;
 }
 
+.enter-btn{
+  padding:12px 28px;
+  border:1px solid #8b5e3c;
+  background:transparent;
+  color:#8b5e3c;
+  letter-spacing:2px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.enter-btn:hover{
+  background:#8b5e3c;
+  color:white;
+}
+
+/* SIDE PILLARS */
+.garland-left, .garland-right{
+  position: fixed;
+  top: var(--pillar-top);
+  width: var(--pillar-width);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.garland-left { left: 0; }
+.garland-right { right: 0; }
+
+/* HEADER */
+header.hero{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+header.hero h1{
+  font-family:"Great Vibes", cursive;
+  font-size:56px;
+  margin:0;
+  color:#8b5e3c;
+}
+
+header.hero p.lead{
+  color:#a67c52;
+  font-size:16px;
+  margin-top:8px;
+  letter-spacing:2px;
+}
+
+/* MAIN */
+main{
+  max-width:950px;
+  margin:0 auto;
+  padding:20px;
+  position:relative;
+  z-index:2;
+}
+
+/* CARDS */
+.card{
+  background:var(--card);
+  backdrop-filter:blur(10px);
+  border-radius:16px;
+  padding:26px;
+  margin-bottom:28px;
+  border:1px solid rgba(139,94,60,0.1);
+  box-shadow:0 20px 50px rgba(0,0,0,0.05);
+}
+
+/* TITLES */
+.section-title{
+  font-family:'Great Vibes', cursive;
+  font-size:36px;
+  text-align:center;
+  color:#8b5e3c;
+  margin-bottom:16px;
+}
+
+.tiny{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* VENUE */
+.card h3{
+  font-family:'Playfair Display', serif;
+}
+
+/* TABS */
+.tabs{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-bottom:24px;
+}
+
+.tab-btn{
+  padding:10px 20px;
+  border-radius:30px;
+  border:1px solid rgba(139,94,60,0.3);
+  background:transparent;
+  color:#8b5e3c;
+  font-family:'Cinzel', serif;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.tab-btn.active{
+  background:#8b5e3c;
+  color:#fff;
+}
+
+/* TAB CONTENT */
+.tab-content{
+  display:none;
+  animation:fadeUp 0.6s ease;
+}
+
+.tab-content.active{
+  display:block;
+}
+
+/* EVENTS */
 .event-row{
-  display: flex;
-  flex-direction: row;
-}
-  
-.event-row.reverse {
-  flex-direction: row-reverse;
-}
+  display:flex;
+  gap:28px;
+  align-items:center;
+  margin-bottom:50px;
 
-.event-image {
-  width: 50%;
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp 1s ease forwards;
 }
 
-.event-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  object-fit: cover;
+.event-row:nth-child(1){animation-delay:0.2s;}
+.event-row:nth-child(2){animation-delay:0.4s;}
+.event-row:nth-child(3){animation-delay:0.6s;}
+.event-row:nth-child(4){animation-delay:0.8s;}
+
+.event-row.reverse{
+  flex-direction:row-reverse;
 }
 
-.event-content {
-  width: 50%;
+.event-image{
+  width:50%;
 }
 
-.event-content h3 {
-  font-family: "Playfair Display", serif;
-  margin-top: 0;
+.event-image img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
 }
 
-.event-content p {
-  margin-top: 8px;
-  line-height: 1.6;
+.event-content{
+  width:50%;
 }
 
-
-
-
-
-
-  /* MAIN CONTENT */
-  main{ max-width:950px; margin:0 auto; padding:20px; position:relative; z-index:2; }
-  .card{ background:var(--card); border-radius:14px; padding:26px; margin-bottom:24px; box-shadow:0 10px 28px rgba(15,23,42,0.06); }
-
-  .couple{ display:flex; gap:20px; align-items:center; padding:18px; border-radius:12px; background:linear-gradient(180deg, rgba(245,243,240,0.6), rgba(255,255,255,0.6)); }
-  .couple img{ width:160px; height:160px; object-fit:cover; border-radius:12px; border:6px solid rgba(245,241,236,0.9); }
-  .welcome{ flex:1 }
-  .welcome h2{ margin:0; font-family:'Playfair Display',serif; font-size:22px }
-  .welcome p{ margin:8px 0 0; color:var(--muted) }
-
-  h2.section-title{ font-family:'Playfair Display',serif; margin:0 0 10px 0 }
-  .meta{ color:var(--muted); font-size:14px }
-  .schedule-item{ margin-bottom:12px }
-
-/* Tabs */
-.tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 16px;
+.event-content h3{
+  font-family:'Playfair Display', serif;
+  font-size:24px;
+  color:#8b5e3c;
+  margin:0;
 }
 
-.tab-btn {
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 1px solid #e6e9ef;
-  background: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--accent);
-  transition: all 0.2s ease;
+.event-content p{
+  margin-top:8px;
+  line-height:1.8;
+  font-size:14px;
 }
 
-.tab-btn.active {
-  background: var(--accent);
-  color: #fff;
+/* FOOTER */
+footer{
+  padding:28px 10px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
 }
 
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.tab-content h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 6px;
-}
-
-
-  /* FORM */
-  form{ margin-top:6px }
-  label.field{ display:block; margin-top:12px; font-weight:600; font-size:14px }
-  input[type=text], input[type=tel], input[type=date], input[type=time], select, textarea{
-    width:100%; padding:11px; border-radius:10px; border:1px solid #e6e9ef; font-size:14px; margin-top:8px;
+/* ANIMATION */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
   }
-  textarea{ resize:vertical }
-  .option{ display:flex; align-items:center; gap:10px; margin-top:8px }
-  .option input{ margin:0; transform:scale(1.05) }
-  .row{ display:flex; gap:12px }
-  .row .col{ flex:1 }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
-  .btn{ display:inline-block; padding:10px 16px; border-radius:10px; background:var(--accent); color:#fff; border:none; cursor:pointer; font-weight:700 }
-
-  .tiny{ color:var(--muted); font-size:13px }
-  .success{ background:#ecfdf5; border-left:4px solid #10b981; padding:12px; margin-top:12px; border-radius:8px; display:none }
-
-  footer{ padding:28px 10px; text-align:center; color:var(--muted); font-size:13px }
-
- /* MOBILE */
 /* MOBILE */
 @media (max-width:760px){
 
-  /* Pillars */
   .garland-left,
   .garland-right{
-    display: block;
-    width: 140px;
-    opacity: 0.25;
-    top: 0;
-    z-index: 0;
-  }
-
-  .garland-left{ left: -5px; }
-  .garland-right{ right: -5px; }
-
-  /* Header */
-  header.hero{
-    padding-top:120px;
+    width:140px;
+    opacity:0.25;
   }
 
   header.hero h1{
-    font-size:36px;
+    font-size:40px;
   }
 
-  /* Schedule layout */
   .event-row{
-    flex-direction: column;
+    flex-direction:column;
   }
 
-  .event-row .event-image{
-    order: 1;
+  .event-image,
+  .event-content{
+    width:100%;
   }
 
-  .event-row .event-content{
-    order: 2;
+  .intro-names{
+    font-size:34px;
   }
 }
-
-
-
-  .attend-options {
-    display: flex;
-    gap: 20px; /* space between Yes and No */
-    align-items: center;
-    margin-top: 8px;
-  }
-
-  .attend-options .option {
-    margin: 0; /* remove default margin-top from .option if any */
-  }
-
-  .attend-options input[type="radio"] {
-    margin: 0;
-    transform: scale(1.05);
-  }
-
-  .attend-options span {
-    /* optional: adjust spacing / alignment if needed */
-    display: inline-block;
-    vertical-align: middle;
-  }
+  
 </style>
 </head>
 <body>
@@ -294,19 +296,21 @@
   <header class="hero">
     <div class="hero-overlay">
       <h1>Gayathri & Krishna</h1>
-      <p class="lead">Aswathy Kalyana Mandapam • June 6–7, 2026</p>
+      <p class="lead">Aswathy Kalyana Mandapam • June 6,7, 2026</p>
     </div>
   </header>
 
+  <div id="intro">
+  <div class="intro-inner">
+    <h2 class="intro-sub">The Wedding Of</h2>
+    <h1 class="intro-names">Gayathri & Krishna</h1>
+    <p class="intro-date">June 6 – 7 • Palakkad</p>
+    <button class="enter-btn" onclick="enterSite()">Enter</button>
+  </div>
+</div>
+
   <main>
-    <!-- Couple Photo + Welcome -->
-    <section class="card couple">
-      <img id="couplePhoto" src="couple.jpg" alt="Gayathri & Krishna" onerror="this.style.display='none'" />
-      <div class="welcome" style="text-align:center;">
-        <h2>🙏🏼 Welcome 🙏🏼</h2>
-<!----        <p class="tiny">We’re so happy you’ll be part of our celebration. Please find details below — timings are tentative and will be updated here once finalized.</p> -->
-      </div>
-    </section>
+    
 
 
     <!-- Venue -->
@@ -364,61 +368,7 @@
 </section>
 
 
-    <!-- RSVP -->
-    <section class="card">
-      <h2 class="section-title">RSVP</h2>
-      <p class="tiny">Please let us know if you’ll be joining us! </p>
-
-      <form id="rsvpForm">
-        <label class="field" for="name">Full name</label>
-        <input id="name" name="name" type="text" required />
-
-        <label class="field" for="phone">Phone number</label>
-        <input id="phone" name="phone" type="tel" placeholder="9876543210" 
-       pattern="[0-9]{10}" maxlength="10" required />
-
-        <label class="field">Will you be attending the marriage?</label>
-        <div class="attend-options">
-        <label class="option">
-            <input type="radio" name="attend" value="Yes" required />
-            <span>Yes</span>
-        </label>
-        <label class="option">
-            <input type="radio" name="attend" value="No" />
-            <span>No</span>
-        </label>
-        </div>
-        <label class="field">Which event will you be attending?</label>
-        <label class="option"><input type="checkbox" name="day_6" value="June 6 - Reception" /> <span>June 6 - Reception</span></label>
-        <label class="option"><input type="checkbox" name="day_7" value="June 7 - Marriage" /> <span>June 7 - Marriage</span></label>
-
-        <div class="row">
-          <div class="col">
-            <label class="field" for="arrival_date">Arrival date</label>
-            <input id="arrival_date" name="arrival_date" type="date" />
-          </div>
-          <div class="col">
-            <label class="field" for="arrival_time">Arrival time</label>
-            <input id="arrival_time" name="arrival_time" type="time" />
-          </div>
-        </div>
-
-        <label class="field" for="guests">Number of guests (including you)</label>
-        <select id="guests" name="guests">
-          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-        </select>
-
-        <label class="field" for="note">Any additional message (optional)</label>
-        <textarea id="note" name="note" rows="3"></textarea>
-
-        <div style="margin-top:14px;display:flex;gap:12px;align-items:center">
-          <button class="btn" type="submit">Send RSVP</button>
-          <div id="status" class="tiny"></div>
-        </div>
-      </form>
-
-      <div id="thanks" class="success">Thanks — your response has been recorded.</div>
-    </section>
+    
 
   <!-- Schedule + Food Menu Tabs -->
 <section class="card">
@@ -581,57 +531,9 @@
 
 
 
-  <footer>Made with ❤️ by Gayathri — update this page with your final timings and personal touches.</footer>
+  <footer>Made with ❤️ </footer>
 
 <script>
-  const form = document.getElementById("rsvpForm");
-  const thanks = document.getElementById("thanks");
-
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwTQasyEFHYx1XX_-vMB4pWOyv6B8kiwqr30ohCrow5u4WyDeq6NqECxca1oz7b2SsDMA/exec";  // from Google Apps Script
-
-  form.addEventListener("submit", async function(e){
-  e.preventDefault();
-
-  const data = {
-    name: form.name.value,
-    phone: form.phone.value,
-    attend: form.attend.value,
-    day_6: form.day_6.checked ? "Yes" : "No",
-    day_7: form.day_7.checked ? "Yes" : "No",
-    arrival_date: form.arrival_date.value,
-    arrival_time: form.arrival_time.value,
-    guests: form.guests.value,
-    note: form.note.value
-  };
-
-  try {
-    const res = await fetch(SCRIPT_URL, {
-      method: "POST",
-      body: JSON.stringify(data)
-    });
-
-    if(res.ok){
-      // Clear form
-      form.reset();
-
-      // Show success message
-      thanks.innerText = "✅ RSVP sent successfully!";
-      thanks.style.display = "block";
-
-      // Auto hide after 4 seconds (optional)
-      setTimeout(() => {
-        thanks.style.display = "none";
-      }, 4000);
-
-    } else {
-      alert("Submission failed. Please try again.");
-    }
-  } catch(err){
-    alert("Network error. Please check your internet.");
-  }
-});
-
-
   // TAB SWITCHING FUNCTION
   function openTab(e, tabId) {
   document.querySelectorAll('.tab-btn').forEach(btn =>
@@ -644,6 +546,11 @@
 
   e.target.classList.add('active');
   document.getElementById(tabId).classList.add('active');
+}
+
+  // Intro
+  function enterSite(){
+  document.getElementById("intro").style.display = "none";
 }
 
 </script>
